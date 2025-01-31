@@ -1,0 +1,1 @@
+export const SHOP_URL ="http://localhost:5488/products?page_size="
