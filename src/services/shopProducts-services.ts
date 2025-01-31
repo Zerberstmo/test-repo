@@ -47,7 +47,10 @@ export const useShopProducts = () => {
 
       // Gruppiere die Produkte nach Kategorie
       const grouped: GroupedProducts = data.data.reduce(
-        (acc: { [x: string]: any[] }, product: { category: string }) => {
+        (
+          acc: { [x: string]: { category: string }[] },
+          product: { category: string },
+        ) => {
           const category = product.category || "Uncategorized";
           if (!acc[category]) acc[category] = [];
           acc[category].push(product);
